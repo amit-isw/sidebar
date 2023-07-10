@@ -1,0 +1,195 @@
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.flex-container{
+  display: flex;
+}
+.sidebar{
+  height:100vh;
+  top: 0;
+  left: 0;
+  background: #cf1717;
+  position:fixed;
+  z-index: 10;
+}
+.box{
+  width: 60px;
+  overflow: hidden;
+  transition: width 0.5s;
+}
+.box:hover{
+  width: 300px;
+}
+.main-content{
+  position: relative;
+  left: 60px;
+}
+.box ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height:100vh;
+}
+.box ul li{
+  list-style: none;
+}
+.box ul li:hover{
+  background-color: #c94c4c;
+}
+.box ul li a{
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.box ul li a .icon{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+}
+.box ul li a .icon svg{
+  fill: #fff;
+}
+
+.box ul li a .text{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.box ul .main .logo{
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.box ul .main .logo svg{
+  font-size: 1.75rem;
+}
+
+.box ul .main .logo .text{
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.bottom .profile-image{
+  position:relative;
+  width: 40px;
+  height: 40px;
+}
+.bottom .profile-image img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.box:last-child{
+  width: calc(100% - 60px);
+}
+
+
+/* Image carousel */
+.mySlides {display: none;}
+
+.slideshow-container img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.slideshow-container .text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.slideshow-container .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.slideshow-container .dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+  display: none;
+}
+
+.slideshow-container .active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.slideshow-container .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.bulletin{
+  justify-content: flex-start;
+  padding: 3rem;
+  gap: 3rem;
+  flex-wrap: nowrap;
+}
+.bulletin > *{
+  flex: 1;
+}
+.bulletin .flex-item{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.bulletin img{
+  width: 100%;
+}
+
+.bulletin .bottom .btn{
+  display:inline-block;
+  text-decoration: none;
+  background-color:#cf1717;
+  color: #fff;
+  padding: .5rem 2rem;
+  border-radius: 100px;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
